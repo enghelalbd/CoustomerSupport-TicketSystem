@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Login issue",
+    "description": "User is unable to log in using valid credentials.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-12-20T10:15:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Password reset not working",
+    "description": "Reset password email is not being delivered.",
+    "customer": "Karim Ahmed",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-12-21T08:40:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Page loading slowly",
+    "description": "Dashboard page takes too long to load.",
+    "customer": "Nusrat Jahan",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-12-22T11:25:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Payment failed",
+    "description": "Customer payment failed during checkout.",
+    "customer": "Arif Hossain",
+    "priority": "High",
+    "status": "Resolved",
+    "createdAt": "2025-12-23T14:10:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Email notification issue",
+    "description": "System is not sending order confirmation emails.",
+    "customer": "Shabnam Akter",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-12-24T09:55:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Profile update error",
+    "description": "User cannot update profile information.",
+    "customer": "Tanvir Hasan",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2025-12-25T16:30:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Account suspended",
+    "description": "Account suspended without prior notice.",
+    "customer": "Farzana Rahman",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-12-26T12:05:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Incorrect invoice",
+    "description": "Invoice amount does not match order total.",
+    "customer": "Mahmudul Islam",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-12-27T15:45:00Z"
+  },
+  {
+    "id": 9,
+    "title": "App crash on startup",
+    "description": "Mobile app crashes immediately after opening.",
+    "customer": "Sadia Chowdhury",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-12-28T07:20:00Z"
+  },
+  {
+    "id": 10,
+    "title": "Search not returning results",
+    "description": "Search feature does not show any data.",
+    "customer": "Imran Khan",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-12-29T18:10:00Z"
+  },
+  {
+    "id": 11,
+    "title": "File upload failed",
+    "description": "Users cannot upload documents.",
+    "customer": "Ayesha Siddika",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-12-30T13:00:00Z"
+  },
+  {
+    "id": 12,
+    "title": "Logout button not working",
+    "description": "Clicking logout does not end the session.",
+    "customer": "Sabbir Rahman",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-12-31T20:35:00Z"
+  }
+]

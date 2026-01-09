@@ -1,38 +1,47 @@
 const Navbar = () => {
   return (
-    <div className="content-box flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-5">
-      <nav>
-        <ul className="flex gap-16 ">
-          <li className="">
-            <a
-              href="#"
-              className="border-b-3 border-rpimary py-1   border-primary duration-200 hover:font-bold"
-            >
-              Orders
+    <div>
+      <nav className=" mx-auto flex justify-between items-center px-4 py-3">
+        <h1 className="text-3xl font-bold">CS — Ticket System</h1>
+
+        <ul className="flex gap-4 text-lg items-center">
+          <li>
+            <a href="#" className="hover:font-bold">
+              Home
             </a>
           </li>
-          <li className="">
-            <a
-              href="#"
-              className="border-b-3 border-rpimary py-1   border-primary duration-200 hover:font-bold"
-            >
-              Foods
+          <li>
+            <a href="#" className="hover:font-bold">
+              Faq
             </a>
           </li>
-          <li className="">
-            <a
-              href="#"
-              className="border-b-3 border-rpimary py-1   border-primary duration-200 hover:font-bold"
-            >
-              Tables
+          <li>
+            <a href="#" className="hover:font-bold">
+              Changelog
             </a>
           </li>
-          <li className="">
+          <li>
+            <a href="#" className="hover:font-bold">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:font-bold">
+              Download
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:font-bold">
+              Contact
+            </a>
+          </li>
+
+          <li>
             <a
               href="#"
-              className="border-b-3 border-rpimary py-1   border-primary duration-200 hover:font-bold"
+              className="bg-purple-600 text-white px-3 py-1 rounded hover:bg-purple-700"
             >
-              Logout
+              + New Ticket
             </a>
           </li>
         </ul>
