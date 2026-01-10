@@ -6,6 +6,8 @@ import Footer from "./Component/Footer";
 import StatusCards from "./Component/StatusCards";
 import Banner from "./Component/Banner";
 import CoustomerData from "./Component/CoustomerData";
+import Task from "./Component/Task";
+import A from "./Component/A";
 
 const fetchData = async () => {
   const response = await fetch("/data.json");
@@ -25,6 +27,7 @@ function App() {
       <Suspense fallback={<h2> Data Loading </h2>}>
         <CoustomerData fetchPromise={fetchPromise}> </CoustomerData>
       </Suspense>
+
       <Footer></Footer>
     </>
   );
