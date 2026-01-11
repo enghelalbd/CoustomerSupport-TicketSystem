@@ -3,11 +3,15 @@ import { MdOutlineDateRange } from "react-icons/md";
 
 const CustomerData = ({ fetchPromise }) => {
   const initialData = use(fetchPromise);
-  const [data] = useState(initialData);
+  const [data,setData] = useState(initialData);
 
   return (
-    <div className="grid  grid-cols-12 gap-5">
-      <div className="col-span-8 gap-4 grid grid-cols-1 md:grid-cols-2   ">
+    <div className="   grid  grid-cols-12 gap-5">
+      
+      <div
+        onClick={() => handelData(data)}
+        className="col-span-8 gap-4 grid grid-cols-1 md:grid-cols-2   "
+      >
         {data.map((customer) => (
           <div
             key={customer.id}

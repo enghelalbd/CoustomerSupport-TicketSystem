@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 
 import "./App.css";
 import Navbar from "./Component/Navbar";
@@ -6,8 +6,6 @@ import Footer from "./Component/Footer";
 import StatusCards from "./Component/StatusCards";
 import Banner from "./Component/Banner";
 import CoustomerData from "./Component/CoustomerData";
-import Task from "./Component/Task";
-import A from "./Component/A";
 
 const fetchData = async () => {
   const response = await fetch("/data.json");
@@ -15,7 +13,6 @@ const fetchData = async () => {
 };
 
 function App() {
-  const [count, setCount] = useState(0);
   const fetchPromise = fetchData();
 
   return (
