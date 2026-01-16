@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import "./App.css";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
-import StatusCards from "./Component/StatusCards";
+
 import Banner from "./Component/Banner";
 import CoustomerData from "./Component/CoustomerData";
 
@@ -20,7 +20,6 @@ function App() {
       <Navbar></Navbar>
       <Banner></Banner>
 
-      <StatusCards></StatusCards>
       <Suspense fallback={<h2> Data Loading </h2>}>
         <CoustomerData fetchPromise={fetchPromise}> </CoustomerData>
       </Suspense>
