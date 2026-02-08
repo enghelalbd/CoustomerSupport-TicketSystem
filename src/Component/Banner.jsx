@@ -15,7 +15,7 @@ const Banner = ({ totalTask }) => {
       {/* Resolved */}
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-green-500 to-emerald-600 h-56 flex flex-col justify-center items-center text-white">
         <h3 className="text-2xl mb-4">Resolved</h3>
-        <span className="text-6xl font-bold">0</span>
+        <span className="text-6xl font-bold">{0}</span>
 
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_left,white_1px,transparent_1px)] bg-[length:20px_20px]"></div>
       </div>

@@ -2,25 +2,12 @@ import { use, useState } from "react";
 import { MdOutlineDateRange } from "react-icons/md";
 import Status from "./Status";
 import Banner from "./Banner";
+import TaskStatus from "./TaskStatus";
 
-const Issue = ({ fetchPromise, taskstatus, setstatus }) => {
-  const initalData = use(fetchPromise);
-  const [data, setData] = useState([...initalData]);
-
-  console.log(taskstatus);
-
-  const handleData = (customer) => {
-    alert("Issue Received");
-
-    const newstatus = [...taskstatus, customer];
-    setstatus(newstatus);
-    const totalTask = taskstatus.length;
-    // console.log(totalTask);
-    // // console.log(customer);
-  };
-
+const Issue = ({ taskstatus, setstatus,resolvedTasks,setresolvedTasks }) => {
   return (
     <div className="col-span-8 gap-4 grid grid-cols-1 md:grid-cols-2">
+      {/* <Banner totalTask={taskstatus.length} /> */}
       {Array.isArray(data) &&
         data.map((customer) => (
           <div
@@ -41,8 +28,8 @@ const Issue = ({ fetchPromise, taskstatus, setstatus }) => {
                   customer.status === "Open"
                     ? "bg-green-100 text-green-700"
                     : customer.status === "In Progress"
-                    ? "bg-yellow-100 text-yellow-700"
-                    : "bg-gray-100 text-gray-700"
+                      ? "bg-yellow-100 text-yellow-700"
+                      : "bg-gray-100 text-gray-700"
                 }`}
               >
                 {customer.status}
@@ -62,10 +49,10 @@ const Issue = ({ fetchPromise, taskstatus, setstatus }) => {
                     customer.priority === "Low"
                       ? "bg-green-100 text-green-700"
                       : customer.priority === "Medium"
-                      ? "bg-yellow-100 text-yellow-700"
-                      : customer.priority === "High"
-                      ? "bg-red-100 text-red-700"
-                      : "bg-gray-100 text-gray-700"
+                        ? "bg-yellow-100 text-yellow-700"
+                        : customer.priority === "High"
+                          ? "bg-red-100 text-red-700"
+                          : "bg-gray-100 text-gray-700"
                   }`}
                 >
                   {customer.priority}

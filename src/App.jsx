@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 
 import "./App.css";
 import Navbar from "./Component/Navbar";
@@ -7,22 +7,37 @@ import Footer from "./Component/Footer";
 import Banner from "./Component/Banner";
 import CoustomerData from "./Component/CoustomerData";
 
-const fetchData = async () => {
-  const response = await fetch("/data.json");
-  return response.json();
-};
-
 function App() {
-  const fetchPromise = fetchData();
+  const [data, setData] = useState([]);
+
+  const [taskstatus, setstatus] = useState([]);
+  const [resolvedTasks, setResolvedTasks] = useState([]);
+  useEffect(() => {
+    fetch("/data.json")
+      .then((res) => res.json())
+      .then((d) => {
+        setData(d);
+      });
+  }, []);
+  const handleData = (customer) => {
+    alert("Issue Received");
+
+    const newstatus = [...taskstatus, customer];
+    setstatus(newstatus);
+  };
 
   return (
     <>
       <Navbar></Navbar>
       <Banner></Banner>
 
-      <Suspense fallback={<h2> Data Loading </h2>}>
-        <CoustomerData fetchPromise={fetchPromise}> </CoustomerData>
-      </Suspense>
+      <CoustomerData
+        data={data}
+        taskstatus={taskstatus}
+        resolvedTasks={resolvedTasks}
+        setResolvedTasks={setResolvedTasks}
+        handleData={handleData}
+      />
 
       <Footer></Footer>
     </>

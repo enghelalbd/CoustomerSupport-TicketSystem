@@ -1,7 +1,6 @@
 import React from "react";
 
 const TaskStatus = ({ customer, handleData, taskstatus }) => {
-  console.log(taskstatus);
   return (
     <div>
       <h1 className="text-3xl font-bold text-gray-700 mb-6">Task Status</h1>
@@ -21,7 +20,13 @@ const TaskStatus = ({ customer, handleData, taskstatus }) => {
                 <div className="py-2 flex justify-between items-center gap-2">
                   {" "}
                   <h2>{item.title} </h2>{" "}
-                  <button className="bg-green-300 rounded"> Complete </button>
+                  <button
+                    className="bg-green-300 rounded "
+                    onClick={() => onCompleteClick(item)}
+                  >
+                    {" "}
+                    Complete{" "}
+                  </button>
                 </div>
               ))}
             </>
