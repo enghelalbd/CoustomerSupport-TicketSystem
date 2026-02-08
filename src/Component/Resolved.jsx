@@ -1,6 +1,7 @@
 import React from "react";
 
-const Resolved = () => {
+const Resolved = ({ resolvedTasks }) => {
+  console.log(resolvedTasks);
   return (
     <div>
       <h2 className="text-3xl font-bold text-gray-700 mb-2">Resolved Task</h2>

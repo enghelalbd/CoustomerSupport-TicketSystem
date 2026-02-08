@@ -1,15 +1,14 @@
-import { Suspense, useEffect, useState } from "react";
-
+import { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
-
 import Banner from "./Component/Banner";
 import CoustomerData from "./Component/CoustomerData";
+import TaskStatus from "./Component/TaskStatus";
+import Resolved from "./Component/Resolved";
 
 function App() {
   const [data, setData] = useState([]);
-
   const [taskstatus, setstatus] = useState([]);
   const [resolvedTasks, setResolvedTasks] = useState([]);
   useEffect(() => {
@@ -26,10 +25,22 @@ function App() {
     setstatus(newstatus);
   };
 
+  console.log(taskstatus);
+  const handelresolved = (customer) => {
+    alert("Issue Resolved Successfully");
+
+    const newsolved = [...resolvedTasks, customer];
+    setResolvedTasks(newsolved);
+  };
+
+  console.log(resolvedTasks);
   return (
     <>
       <Navbar></Navbar>
-      <Banner></Banner>
+      <Banner
+        totalTask={taskstatus.length}
+        totalResolvedTasks={resolvedTasks.length}
+      ></Banner>
 
       <CoustomerData
         data={data}
@@ -37,6 +48,7 @@ function App() {
         resolvedTasks={resolvedTasks}
         setResolvedTasks={setResolvedTasks}
         handleData={handleData}
+        handelresolved={handelresolved}
       />
 
       <Footer></Footer>

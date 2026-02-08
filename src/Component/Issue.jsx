@@ -1,13 +1,8 @@
-import { use, useState } from "react";
 import { MdOutlineDateRange } from "react-icons/md";
-import Status from "./Status";
-import Banner from "./Banner";
-import TaskStatus from "./TaskStatus";
 
-const Issue = ({ taskstatus, setstatus,resolvedTasks,setresolvedTasks }) => {
+const Issue = ({ data, handleData, resolvedTasks }) => {
   return (
     <div className="col-span-8 gap-4 grid grid-cols-1 md:grid-cols-2">
-      {/* <Banner totalTask={taskstatus.length} /> */}
       {Array.isArray(data) &&
         data.map((customer) => (
           <div

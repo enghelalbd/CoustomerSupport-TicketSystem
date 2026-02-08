@@ -2,14 +2,17 @@ import React from "react";
 import Resolved from "./Resolved";
 import TaskStatus from "./TaskStatus";
 
-const Status = ({ handleData, taskstatus, resolvedstatus }) => {
+const Status = ({ handleData, taskstatus, resolvedTasks, handelresolved }) => {
   return (
     <div className=" col-span-4 ">
       {/* Task Status */}
-      <TaskStatus taskstatus={taskstatus}></TaskStatus>
+      <TaskStatus
+        taskstatus={taskstatus}
+        handelresolved={handelresolved}
+      ></TaskStatus>
 
       {/* Resolved Task */}
-      <Resolved resolvedstatus={resolvedstatus}></Resolved>
+      <Resolved resolvedTasks={resolvedTasks}></Resolved>
     </div>
   );
 };

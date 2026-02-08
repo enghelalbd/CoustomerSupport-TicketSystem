@@ -1,6 +1,12 @@
 import React from "react";
 
-const TaskStatus = ({ customer, handleData, taskstatus }) => {
+const TaskStatus = ({
+  customer,
+  handleData,
+  taskstatus,
+  handelresolved,
+  resolvedTasks,
+}) => {
   return (
     <div>
       <h1 className="text-3xl font-bold text-gray-700 mb-6">Task Status</h1>
@@ -21,11 +27,10 @@ const TaskStatus = ({ customer, handleData, taskstatus }) => {
                   {" "}
                   <h2>{item.title} </h2>{" "}
                   <button
-                    className="bg-green-300 rounded "
-                    onClick={() => onCompleteClick(item)}
+                    className="bg-green-200 rounded "
+                    onClick={() => handelresolved(item)}
                   >
-                    {" "}
-                    Complete{" "}
+                    Complete
                   </button>
                 </div>
               ))}
