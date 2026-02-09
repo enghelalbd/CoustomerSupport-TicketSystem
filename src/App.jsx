@@ -6,6 +6,7 @@ import Banner from "./Component/Banner";
 import CoustomerData from "./Component/CoustomerData";
 import TaskStatus from "./Component/TaskStatus";
 import Resolved from "./Component/Resolved";
+import { toast, ToastContainer } from "react-toastify";
 
 function App() {
   const [data, setData] = useState([]);
@@ -20,7 +21,15 @@ function App() {
   }, []);
 
   const handelresolved = (customer) => {
-    alert("Issue Resolved Successfully");
+    toast.success("Issue Resolved Successfully", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
     const newsolved = [...resolvedTasks, customer];
     setResolvedTasks(newsolved);
@@ -35,7 +44,16 @@ function App() {
   };
 
   const handleData = (customer) => {
-    alert("Issue Received");
+    // alert("Issue Received");
+    toast.info("Issue Received", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
     const newstatus = [...taskstatus, customer];
     setstatus(newstatus);
@@ -61,6 +79,8 @@ function App() {
       />
 
       <Footer></Footer>
+
+      <ToastContainer></ToastContainer>
     </>
   );
 }
