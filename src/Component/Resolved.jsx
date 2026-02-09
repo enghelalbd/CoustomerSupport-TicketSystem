@@ -21,6 +21,7 @@ const Resolved = ({ resolvedTasks }) => {
                   className="py-2 flex justify-between items-center gap-2"
                 >
                   <h2>{item.title}</h2>
+                  <button className="bg-green-200 rounded ">Completed</button>
                 </div>
               ))}
             </>
