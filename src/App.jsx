@@ -18,6 +18,22 @@ function App() {
         setData(d);
       });
   }, []);
+
+  const handelresolved = (customer) => {
+    alert("Issue Resolved Successfully");
+
+    const newsolved = [...resolvedTasks, customer];
+    setResolvedTasks(newsolved);
+
+    const remainingTasks = taskstatus.filter((task) => task.id !== customer.id);
+    setstatus(remainingTasks);
+
+    const remainingresolvedtasks = data.filter(
+      (task) => task.id !== customer.id,
+    );
+    setData(remainingresolvedtasks);
+  };
+
   const handleData = (customer) => {
     alert("Issue Received");
 
@@ -26,14 +42,7 @@ function App() {
   };
 
   console.log(taskstatus);
-  const handelresolved = (customer) => {
-    alert("Issue Resolved Successfully");
 
-    const newsolved = [...resolvedTasks, customer];
-    setResolvedTasks(newsolved);
-  };
-
-  console.log(resolvedTasks);
   return (
     <>
       <Navbar></Navbar>

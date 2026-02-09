@@ -1,6 +1,6 @@
 import { MdOutlineDateRange } from "react-icons/md";
 
-const Issue = ({ data, handleData, resolvedTasks }) => {
+const Issue = ({ data, handleData, resolvedTasks, handelresolved }) => {
   return (
     <div className="col-span-8 gap-4 grid grid-cols-1 md:grid-cols-2">
       {Array.isArray(data) &&

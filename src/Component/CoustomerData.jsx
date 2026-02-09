@@ -23,7 +23,11 @@ const CustomerData = ({
 
       {/* Right side content */}
 
-      <Status taskstatus={taskstatus} resolvedTasks={resolvedTasks}></Status>
+      <Status
+        taskstatus={taskstatus}
+        handelresolved={handelresolved}
+        resolvedTasks={resolvedTasks}
+      ></Status>
     </div>
   );
 };
